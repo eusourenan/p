@@ -6,32 +6,11 @@
 /*   By: rleite-s < rleite-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 08:02:18 by rleite-s          #+#    #+#             */
-/*   Updated: 2022/12/18 08:56:15 by rleite-s         ###   ########.fr       */
+/*   Updated: 2022/12/18 21:34:56 by rleite-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	ft_ret_bigger(t_stack *a)
-{
-	int	number;
-	int	bigger;
-	int	bigger_index;
-
-	number = a->numbers[0];
-	bigger = 0;
-	bigger_index = bigger;
-	while (bigger <= a->last)
-	{
-		if (a->numbers[bigger] > number)
-		{
-			number = a->numbers[bigger];
-			bigger_index = bigger;
-		}
-		bigger++;
-	}
-	return (bigger_index);
-}
 
 int	ft_ret_pos_smaller(t_stack *a)
 {

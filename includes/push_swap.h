@@ -6,7 +6,7 @@
 /*   By: rleite-s < rleite-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 00:09:11 by msilva-p          #+#    #+#             */
-/*   Updated: 2022/12/18 18:41:48 by rleite-s         ###   ########.fr       */
+/*   Updated: 2022/12/18 21:35:05 by rleite-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int		ft_rotate_rotate(t_stack *a, t_stack *b);
 int		ft_reverse_rotate_rotate(t_stack *a, t_stack *b);
 
 // Movements utils
-int		ft_ret_bigger(t_stack *a);
 int		ft_ret_pos_smaller(t_stack *a);
 int		ft_ret_bigger_binary(t_stack *a);
 int		ft_is_sorted(t_stack *a);
