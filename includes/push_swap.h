@@ -6,7 +6,7 @@
 /*   By: rleite-s < rleite-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 00:09:11 by msilva-p          #+#    #+#             */
-/*   Updated: 2022/12/18 09:50:16 by rleite-s         ###   ########.fr       */
+/*   Updated: 2022/12/18 18:41:48 by rleite-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ typedef struct s_stack	t_stack;
 
 // Error
 int		ft_error(void);
-int		ft_free_error(t_stack *a, t_stack *b);
 
 // Main
-int		ft_create_vector(int argc, char **args);
+int		ft_create_vector(t_stack *a, t_stack *b, int argc, char **args);
 int		ft_alloc_stack(t_stack *a, t_stack *b, int args);
 int		ft_define_index(t_stack *a, int args);
 

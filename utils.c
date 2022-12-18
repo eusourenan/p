@@ -6,7 +6,7 @@
 /*   By: rleite-s < rleite-s@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 23:32:57 by rleite-s          #+#    #+#             */
-/*   Updated: 2022/12/18 08:30:20 by rleite-s         ###   ########.fr       */
+/*   Updated: 2022/12/18 18:59:08 by rleite-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int	ft_is_only_numbers(char **argv)
 {
-	int		line;
 	int		column;
 	char	*trim;
 
-	line = 0;
-	while (argv[line] != NULL)
+	while (argv[0] != NULL)
 	{
-		trim = ft_strtrim(argv[line], " \f\t\r\v\n");
-		if (!*trim)
+		trim = ft_strtrim(argv[0], " \f\t\r\v\n");
+		if (!trim || !*trim)
 		{
 			free(trim);
 			return (1);
@@ -30,13 +28,14 @@ int	ft_is_only_numbers(char **argv)
 		column = 0;
 		while (trim[column] != '\0')
 		{
-			if (ft_isdigit(trim[column]) == 0
-				&& (trim[column] != '-' || column != 0))
+			if ((ft_isdigit(trim[column]) == 0
+					&& (trim[column] != '-' || column != 0))
+				|| (trim[column] == '-' && trim[column + 1] == '\0'))
 				return (1);
 			column++;
 		}
 		free(trim);
-		line++;
+		argv++;
 	}
 	return (0);
 }
